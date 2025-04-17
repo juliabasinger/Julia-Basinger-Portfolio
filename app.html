@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compliment Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff0f5;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #cc3366;
+    }
+
+    button {
+      background-color: #cc3366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b32a5d;
+    }
+
+    #compliment {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #444;
+    }
+
+    nav {
+      margin-bottom: 40px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #444;
+      margin: 0 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="scratch.html">Back to Fun Page</a>
+  </nav>
+
+  <h1>Compliment Generator</h1>
+  <p>Click the button for a little boost ✨</p>
+  <button onclick="generateCompliment()">Give Me a Compliment</button>
+
+  <div id="compliment"></div>
+
+  <script>
+    const compliments = [
+      "You’re doing amazing, sweetie ✨",
+      "Your smile could light up the world 🌟",
+      "You make everything better 💖",
+      "You’re absolutely crushing it 🔥",
+      "You bring sunshine wherever you go ☀️",
+      "You're smarter than you think and stronger than you feel 💪",
+      "You make people feel seen and valued 💬",
+      "You're one of a kind — and the world is lucky to have you 🌍",
+      "Your creativity is inspiring 🎨",
+      "You’re magic. Don't forget it. ✨"
+    ];
+
+    function generateCompliment() {
+      const random = Math.floor(Math.random() * compliments.length);
+      document.getElementById("compliment").innerText = compliments[random];
+    }
+  </script>
+
+</body>
+</html>
